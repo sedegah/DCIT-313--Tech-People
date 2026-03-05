@@ -1,6 +1,6 @@
 # DCIT313 - TechPeople: CS Specialization Expert System
 
-Welcome to the **Advanced Rule-Based Expert System** developed by **Group: Tech People**. This system is designed to provide intelligent academic advisory for Computer Science students at the University of Ghana, helping them select the most suitable specialization track.
+Welcome to the **Advanced Rule-Based Expert System** developed by **Tech People**. This system is designed to provide intelligent academic advisory for Computer Science students at the University of Ghana, helping them select the most suitable specialization track.
 
 ---
 
