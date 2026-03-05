@@ -1,4 +1,4 @@
-# DCIT313-GroupTechPeople-CS-Specialization-Expert-System
+# DCIT313-TechPeople-CS-Specialization-Expert-System
 
 ## Group Members
 | Name | 
