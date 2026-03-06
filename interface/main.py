@@ -137,6 +137,10 @@ class ExpertSystemApp(ctk.CTk):
             self.show_results()
 
     def next_question(self):
+        if self.current_step >= len(self.questions):
+            self.show_results()
+            return
+            
         trait, _, _ = self.questions[self.current_step]
         val = int(self.slider.get())
         self.user_responses[trait] = val
