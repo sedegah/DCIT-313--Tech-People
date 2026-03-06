@@ -156,8 +156,16 @@ class ExpertSystemApp(ctk.CTk):
             'nlp_ai': 'NLP & Artificial Intelligence',
             'iot_systems': 'IoT Systems Engineering',
             'cyber_defense': 'Cybersecurity & Defense',
-            'ar_vr_hci': 'AR/VR & Immersive Interaction',
-            'generalist_architect': 'Chief Technical Product Architect'
+            'cloud_systems': 'Cloud & Distributed Systems',
+            'blockchain_dev': 'Blockchain Development',
+            'data_engineering': 'Big Data Engineering',
+            'game_dev': 'Game Development',
+            'bioinformatics': 'Bioinformatics',
+            'quantum_computing': 'Quantum Computing',
+            'ar_vr_hci': 'AR/VR & Human-Computer Interaction',
+            'computer_vision': 'Computer Vision',
+            'generalist_architect': 'Technical Architecture',
+            'no_cs_interest': 'No Computer Science Interest'
         }
         if rec in overrides: return overrides[rec]
         return " ".join([p.upper() if p.lower() in ['nlp', 'ai', 'iot', 'os', 'hpc', 'ar', 'vr'] else p.capitalize() for p in rec.split('_')])
