@@ -1,4 +1,6 @@
 :- dynamic student_score/2.
+:- discontiguous specialization/1.
+:- discontiguous calc_score/2.
 
 specialization(computer_vision).
 specialization(nlp_ai).
@@ -111,7 +113,9 @@ why(game_dev, 'Your passion for Computer Graphics and Physics engines, combined 
 why(bioinformatics, 'Your interest in Biological data and Algorithmic optimization puts you on the path to discovering medical breakthroughs through computational modeling.').
 why(quantum_computing, 'Your mastery of Linear Algebra and Quantum Physics prepares you for the next frontier of computing, solving NP-hard problems with quantum circuits.').
 why(ar_vr_hci, 'Your focus on User Experience and Spatial computing makes you an ideal architect for the future of immersive Augmented and Virtual Reality systems.').
-why(generalist_architect, 'Your peak performance across all technical and creative benchmarks identifies you as a rare "T-Shaped" talent, capable of directing complex engineering projects.').
+why(no_cs_interest, 'Your consistently low interest across all computer science domains suggests that Computer Science may not be the right fit for your academic and career goals. Consider exploring fields that align more closely with your natural interests and strengths.').
+
+job_description(no_cs_interest, 'Career Recommendation: Based on your responses, you may want to consider alternative academic paths such as Business, Arts, Social Sciences, or other fields where you can find more genuine interest and motivation. Computer Science requires strong passion for technology, problem-solving, and continuous learning in rapidly evolving technical domains.').
 
 job_description(computer_vision, 'Roboticist / CV Engineer: You will develop algorithms that allow machines to see and understand the physical world. Core tasks include image processing, 3D reconstruction, and motion planning for autonomous systems.').
 job_description(nlp_ai, 'NLP Scientist / AI Architect: You will focus on the computational modeling of human language. Your role involves developing Large Language Models (LLMs), sentiment analysis tools, and machine translation systems.').
@@ -145,11 +149,29 @@ mapping(quantum_computing, [quantum_physics, linear_algebra, math_strength]).
 mapping(ar_vr_hci, [ux_design, graphics_interest, app_building]).
 mapping(generalist_architect, [programming_skill, math_strength, algorithms_interest]).
 
+specialization(no_cs_interest).
+
+calc_score(no_cs_interest, Score) :-
+    findall(Val, student_score(_, Val), Scores),
+    length(Scores, Count),
+    Count > 0,
+    sum_list(Scores, Total),
+    Average is Total / Count,
+    (Average =< 1.0 -> Score = 10.0 ; Score = 0.0).
+
 recommendation(BestTrack) :-
     findall(Score-Track, (specialization(Track), calc_score(Track, Score)), Scores),
     keysort(Scores, Sorted),
     reverse(Sorted, [MaxScore-BestTrack|_]),
     MaxScore > 2.0.
+
+recommendation(no_cs_interest) :-
+    findall(Val, student_score(_, Val), Scores),
+    length(Scores, Count),
+    Count > 0,
+    sum_list(Scores, Total),
+    Average is Total / Count,
+    Average =< 1.0.
 
 clear_scores :- retractall(student_score(_, _)).
 add_score(Trait, Value) :- assertz(student_score(Trait, Value)).
