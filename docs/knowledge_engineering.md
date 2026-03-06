@@ -46,13 +46,44 @@ The system architecture reflects the interdisciplinary nature of AI:
 - **Statistics (Math)**: The application of weighted averages to resolve uncertainty.
 - **Cognitive Science (Psychology)**: The mimicking of an expert's "Intuition" through the prioritization of certain traits over others (e.g., placing more weight on Linear Algebra for Quantum Computing than on general programming).
 
-5. Logic Integrity Verification
+## 5. Logic Integrity Verification
 | Test Case | Expected Outcome | Logic Integrity Check |
 |-----------|------------------|----------------------|
 | High DNA/Bio + High Algo | Bioinformatics | **Bio Mapping** (Algo*0.3 + Bio*0.3) > Threshold |
 | High Physics + High Math | Computer Vision | **Physics Priority** (Phys*0.2 + LA*0.3) > Threshold |
-| Mixed Weak Scores (All 0s) | No Match Found | **Safety Threshold** (MaxScore < 2.0) Prevents False Advice | 
-| All Peak Scores (All 5s) | Generalist Architect | **Salience Overdrive** Logic identifies "T-Shaped" talent. |
+| Mixed Weak Scores (All 0s) | No CS Interest | **Zero Interest Detection** (Average ≤ 1.0) Triggers Alternative Path Recommendation |
+| All Peak Scores (All 5s) | Generalist Architect | **Salience Overdrive** Logic identifies "T-Shaped" talent |
+| Low Interest Across All Domains | No CS Interest | **Academic Guidance** System suggests exploring other fields |
+
+### 5.1 Advanced Negative Case Handling
+The system now includes sophisticated negative case detection:
+
+- **Zero Interest Threshold**: When average score across all domains ≤ 1.0, the system recommends `no_cs_interest`
+- **Academic Guidance**: Instead of forcing a CS specialization, the system provides honest guidance about alternative academic paths
+- **Explainable Negative Reasoning**: The `why/2` predicate explains why CS may not be suitable, suggesting fields like Business, Arts, or Social Sciences
+- **Career Counseling**: The `job_description/2` predicate provides detailed explanation of CS requirements and why other fields might be better aligned
+
+This enhancement demonstrates **Ethical AI** principles - the system prioritizes student success over forced domain matching.
 
 ## 6. Conclusion
 By decoupling the **Knowledge Base** from the **Inference Mechanism**, we have created a system that is not only "code" but a true **Knowledge-Based System**. It honors the principles of Symbolic AI while utilizing modern UI techniques to deliver high-fidelity academic advisory.
+
+### 6.1 Ethical AI Enhancement
+The addition of the `no_cs_interest` specialization represents a significant advancement in **Ethical AI** design:
+
+- **Student-Centric Approach**: The system prioritizes student success over forced specialization matching
+- **Honest Assessment**: Provides transparent guidance when CS may not be the optimal academic path
+- **Alternative Path Recommendation**: Suggests exploring Business, Arts, Social Sciences, or other aligned fields
+- **Preventing Misguided Decisions**: Avoids pushing students into a field where they show no genuine interest or aptitude
+
+This enhancement transforms the system from a simple matching engine into a comprehensive **academic counseling tool** that demonstrates responsible AI deployment in educational contexts.
+
+### 6.2 Technical Achievement Summary
+- **Symbolic Logic Engine**: Complete Prolog knowledge base with 11+ specializations
+- **Weighted Heuristic Scoring**: Mathematical models for uncertainty handling
+- **Explainable AI**: Full reasoning transparency via why/2 and job_description/2 predicates
+- **Ethical Decision Making**: Negative case handling with alternative path guidance
+- **Modern UI Integration**: Python/CustomTkinter interface with real-time feedback
+- **Comprehensive Testing**: 5+ test scenarios including edge cases and negative cases
+
+The system successfully demonstrates advanced Knowledge Engineering principles while maintaining ethical standards in educational AI applications.
