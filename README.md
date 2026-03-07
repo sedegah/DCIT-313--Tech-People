@@ -1,99 +1,130 @@
-# DCIT313 Technical Design: Advanced Rule-Based Expert System
+# DCIT 313 Technical Design: Advanced Rule-Based Expert System
+**Technical Architect & Knowledge Engineer**: SEDEGAH, KIMATHI ELIKPLIM KWASHIE  
+**Group Leader & Data Modeler**: FUSEINI, IYAD-DEEN INUSAH  
 **Reference Repository**: [https://github.com/sedegah/DCIT-313--Tech-People](https://github.com/sedegah/DCIT-313--Tech-People)
 
-This repository contains a high-fidelity Knowledge-Based System (KBS) designed to facilitate academic track selection for Computer Science students. The system implements a decoupled architecture, separating the symbolic logic engine (SWI-Prolog) from the modern graphical interface (Python).
+---
+
+## 1. Project Overview
+This repository contains a high-fidelity **Knowledge-Based System (KBS)** designed to facilitate academic track selection for Computer Science students. The system implements a decoupled architecture, separating the **Symbolic Logic Engine** (SWI-Prolog) from the **Modern Graphical Interface** (Python).
+
+### Core Mission
+To move beyond simple "coding" and build a system that can **reason under uncertainty**, translating human expertise into logical symbols and providing explainable academic guidance.
 
 ---
 
-## Group Members
-| Name | Role |
-|------|------|
-| FUSEINI, IYAD-DEEN INUSAH | Group Leader and Data Modeler |
-| SEDEGAH, KIMATHI ELIKPLIM KWASHIE |Software Developer and Knowledge Engineer |
-| ABDUL SALAM, RABIATU | Systems Analyst |
-| AWAITEY, CHRIS LARBI | Technical Architect |
-| BOYE, EDMUND NII LARYEA | Logic Designer |
-| MENDS-BREW, JASON NANA SAM | Research Lead |
-| OWUSU-ANSAH, OHENEWAA NANA | Documentation Lead |
+## 2. Technical Architecture: The "Mind-Body" Duality
 
----
+The system is designed using a strict **Separation of Concerns** (SoC) pattern.
 
-## System Architecture and Design Patterns
-
-The system adheres to a strict separation of concerns between the **Memory/Intelligence** and **User Interaction** layers.
-
-### 1. Symbolic Logic Engine (Prolog)
-The "Brain" of the system is residing in `knowledge_base/specialization.pl`.
-- **Reasoning Method**: Forward Chaining (Data-driven inference).
-- **Knowledge Representation**: Production rules paired with a weighted scoring mechanism.
-- **Predicates**:
-    - `student_score(Trait, Value)`: Dynamic fact storage for user inputs (0-5 scale).
-    - `calc_score(Specialization, Score)`: Calculates a weighted average based on specific heuristics.
-    - `why(Specialization, Reason)`: Symbolic justification predicate for Explainable AI (XAI) output.
-
-### 2. Inference Interface (Python Bridge)
-The "Actuator" resides in `interface/main.py`.
-- **Library**: `pyswip` (Dynamic Foreign Function Interface).
-- **GUI Framework**: `CustomTkinter` (Modern, asynchronous design).
-- **Workflow**:
-    1. Python initializes a Prolog thread.
-    2. User inputs are collected via a slider-based interface.
-    3. Facts are asserted into the Prolog global database via `prolog.assertz`.
-    4. Python executes the `recommendation(X)` query.
-    5. Results are back-fed into the GUI for visualization.
-
----
-
-## Mathematical Modeling: Weighted Scoring System
-
-Unlike standard Boolean expert systems, this implementation utilizes a weighted sum model to provide more granular accuracy.
-
-### Formula:
-Score for Specialization $S$ is calculated as:
-$$Score(S) = \sum_{i=1}^{n} (Trait_i \times Weight_i)$$
-
-### Example Weights (AI Track):
-- **Mathematics Strength**: 0.4 (40%)
-- **Programming Skill**: 0.3 (30%)
-- **Problem Solving**: 0.3 (30%)
-
-This model ensures that even if a student marks a '3' in math but a '5' in programming, the system balances these inputs to find the most mathematically probable track.
-
----
-
-## Mandatory Project Structure
-
-| Component | Directory | Purpose | AI Role |
-|-----------|-----------|---------|---------|
-| **Knowledge Base** | `/knowledge_base` | Logical Facts and Rules (.pl) | Memory/Intelligence |
-| **Inference Interface** | `/interface` | Python logic and GUI (.py) | User Interaction |
-| **Documentation** | `/docs` | Knowledge Engineering Report (.md) | Knowledge Acquisition |
-
----
-
-## Deployment and Installation
-
-### Hardware/Software Requirements
-- **OS**: Windows/Linux/MacOS
-- **Interpreter**: Python 3.10+
-- **Logic Engine**: SWI-Prolog (Must be in System PATH)
-
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/sedegah/DCIT-313--Tech-People.git
-
-# Install dependencies
-pip install customtkinter pyswip
+```mermaid
+graph TD
+    A[User Action: Questionary] -->|Slider Values 0-5| B[Python Interface: main.py]
+    B -->|prolog.assertz| C[Knowledge Base: specialization.pl]
+    C -->|Symbolic Inference| D{Prolog Brain}
+    D -->|calc_score| E[Weighted Heuristics]
+    D -->|interest_match| F[Interest Drivers]
+    D -->|job_description| G[Career Mapping]
+    E & F & G -->|prolog.query| H[Python GUI Dashboard]
+    H -->|Visualization| I[Expert Recommendation]
 ```
 
-### Critical Note on SWI-Prolog PATH
-The `pyswip` library requires the SWI-Prolog DLL to be accessible. Ensure that the directory containing `libswipl.dll` (e.g., `C:\Program Files\swipl\bin`) is added to your environment `PATH`.
+### 2.1 Symbolic Intelligence (Prolog)
+The "Intelligence" resides entirely in `knowledge_base/specialization.pl`. 
+- **Knowledge Representation**: Production rules paired with a weighted scoring sum model.
+- **Inference Method**: Data-driven forward-chaining.
+- **Explainability**: Handled via `why/2`, `job_description/2`, and `interest_match/2` predicates.
+
+### 2.2 Inference Actuator (Python/CustomTkinter)
+The "Body" residing in `interface/main.py` handles user interaction and system orchestration.
+- **UI Engine**: Asynchronous, dark-mode dashboard with real-time feedback.
+- **Asessment**: 30+ granular questions mapping diverse technical, scientific, and design interests.
 
 ---
 
-## Validation and Logic Integrity
-The system was verified against 25+ test cases, covering:
-- **Positive Correlations**: Strong math + strong logic correctly yielding AI.
-- **Edge Cases**: Middle-of-the-road scores (3/5) triggering fallback "Undecided" recommendations if weights do not meet the minimum confidence threshold ($> 1.5$).
-- **Conflict Resolution**: Utilization of `keysort` and `reverse` predicates to prioritize the highest-scoring track when multiple conditions are partially met.
+## 3. Mathematical Modeling: Weighted Heuristics
+
+The system calculates a **Certainty Score (CS)** for each specialization track $S$ based on $n$ user traits $T$.
+
+$$Score(S) = \sum_{i=1}^{n} (Trait_i \times Weight_i)$$
+
+This model ensures the system handles **Uncertainty**. If a student shows moderate interest across many areas, the system identifies the statistically dominant track based on expert-defined weightings.
+
+---
+
+## 4. Specialization Universe: 12 Cutting-Edge Tracks
+
+The system maps interests to the following high-tech domains:
+
+| Track | Primary Drivers | Career Outcome |
+|-------|-----------------|----------------|
+| **Quantum Computing** | Linear Algebra, Quantum Physics | Quantum Algorithm Researcher |
+| **Bioinformatics** | Statistics, Biology, Algorithms | Genomic Data Scientist |
+| **NLP & AI** | Linguistics, Probabilistic Models | LLM Engineer / AI Scientist |
+| **Computer Vision** | 3D Graphics, Physics, Calculus | Roboticist / CV Researcher |
+| **Game Development** | Shader Programming, C++, Physics | Game Engine Architect |
+| **Cybersecurity** | OS Internals, Networking, Hacking | Security Forensics Expert |
+| **Blockchain** | Cryptography, Distributed Systems | Smart Contract Auditor |
+| **AR/VR & HCI** | Spatial UX, Design, Sensors | Immersive System Designer |
+| **Big Data** | Parallel Computing, ETL, Statistics | Data Infrastructure Engineer |
+| **Cloud/SRE** | Virtualization, Infrastructure, CI/CD | Site Reliability Engineer |
+| **IoT Systems** | Embedded C++, Sensors, Networking | Smart Systems Architect |
+| **No CS Interest** | None (All scores ≤ 1.0 average) | Alternative Academic Path Recommendation |
+
+---
+
+## 5. Group Members & Technical Contributions
+
+| Name | Role | Technical Contribution |
+|------|------|------------------------|
+| FUSEINI, IYAD-DEEN INUSAH | **Group Leader & Data Modeler** | Designed the weighted heuristic matrix and domain mapping. |
+| SEDEGAH, KIMATHI E. K. | **Software Dev & Knowledge Engineer** | Built the Prolog reasoning engine and the Python FFI bridge. |
+| ABDUL SALAM, RABIATU | **Systems Analyst** | Verified the logic integrity through iterative test cases. |
+| AWAITEY, CHRIS LARBI | **Technical Architect** | Defined the system architecture and decoupled SoC pattern. |
+| BOYE, EDMUND NII LARYEA | **Logic Designer** | Implemented the `why` and `interest_match` predicates. |
+| MENDS-BREW, JASON N. S. | **Research Lead** | Acquired domestic and global track requirements. |
+| OWUSU-ANSAH, OHENEWAA N. | **Documentation Lead** | Produced the Knowledge Engineering and technical reports. |
+
+---
+
+## 6. Installation and Deployment
+
+### Requirements
+- **Python 3.10+**
+- **SWI-Prolog** (Installed and added to System PATH)
+- **Dependencies**: `customtkinter`, `pyswip`
+
+### Quick Start
+```bash
+# Install UI and Bridge libraries
+pip install customtkinter pyswip
+
+# Run the Expert System
+docs/run.bat
+```
+
+### Keyboard Shortcuts
+For a faster assessment experience, you can use the following keys:
+- **Numeric Keys (0-5)**: Instantly set the slider to the corresponding value.
+- **Left / Right Arrow Keys**: Fine-tune the response slider.
+- **Enter / Return Key**: Submit and move to the next question.
+
+> [!IMPORTANT]
+> **PATH Configuration**: Ensure `libswipl.dll` (Windows) or `libswipl.so` (Linux) is in your environment PATH.
+
+---
+
+## 7. Validation: Logic Integrity
+To verify the system's symbolic logic, run the automated test suite:
+```bash
+python interface/test.py
+```
+
+Verified against **30+ synthetic profiles**, the system handles:
+- **Positive Correlation**: High math/physics yields CV or Quantum.
+- **Conflicting Inputs**: Balances high interest in biology and data to yield Bioinformatics.
+- **Zero Interest Cases**: All scores ≤ 1.0 average triggers "No CS Interest" recommendation with alternative academic path guidance.
+- **Max Intensity Case**: Identifying a "Chief Technical Product Architect" when excellence is demonstrated across more than 5 distinct high-tech domains.
+
+### Ethical AI Feature
+The system includes responsible negative case handling - when a student shows no genuine interest in Computer Science (average score ≤ 1.0), it provides honest guidance suggesting alternative academic paths like Business, Arts, or Social Sciences, preventing misguided career decisions.
