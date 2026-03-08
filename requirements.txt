@@ -1,0 +1,2 @@
+customtkinter==5.2.2
+pyswip==0.2.9
