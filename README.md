@@ -1,8 +1,8 @@
 # DCIT 313 — Advanced Rule-Based Expert System
 
-> **Technical Architect & Knowledge Engineer:** SEDEGAH, KIMATHI ELIKPLIM KWASHIE
-> **Group Leader & Data Modeler:** FUSEINI, IYAD-DEEN INUSAH
-> **Reference Repository:** [sedegah/DCIT-313--Tech-People](https://github.com/sedegah/DCIT-313--Tech-People)
+Technical Architect & Knowledge Engineer: SEDEGAH, KIMATHI ELIKPLIM KWASHIE
+Group Leader & Data Modeler: FUSEINI, IYAD-DEEN INUSAH
+Reference Repository: sedegah/DCIT-313--Tech-People
 
 ---
 
