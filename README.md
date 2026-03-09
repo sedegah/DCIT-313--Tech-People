@@ -3,8 +3,9 @@
 **Group Leader & Data Modeler**: FUSEINI, IYAD-DEEN INUSAH  
 **Reference Repository**: [https://github.com/sedegah/DCIT-313--Tech-People](https://github.com/sedegah/DCIT-313--Tech-People)
 
+
 [!WARNING] Local Execution Required: This project must be run on a local machine with a graphical display environment. Virtual codespaces (GitHub Codespaces, cloud IDEs) do not have GUI visualizers and cannot render the CustomTkinter interface.
----
+
 
 ## 1. Project Overview
 This repository contains a high-fidelity **Knowledge-Based System (KBS)** designed to facilitate academic track selection for Computer Science students. The system implements a decoupled architecture, separating the **Symbolic Logic Engine** (SWI-Prolog) from the **Modern Graphical Interface** (Python).
