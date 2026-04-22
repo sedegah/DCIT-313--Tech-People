@@ -114,8 +114,7 @@ This model handles **uncertainty** gracefully. When a student shows moderate int
 ---
 
 
-
-## 6. Installation & Deployment
+## 5. Installation & Deployment
 
 ### Requirements
 
@@ -146,7 +145,7 @@ docs/run.bat
 
 ---
 
-## 7. Validation: Logic Integrity
+## 6. Validation: Logic Integrity
 
 Run the automated test suite to verify the symbolic logic:
 
