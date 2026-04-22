@@ -8,6 +8,22 @@
 
 ---
 
+## Group Members & Contributions
+
+| Name | Role | Technical Contribution |
+|------|------|------------------------|
+| FUSEINI, IYAD-DEEN INUSAH | Group Leader & Data Modeler | Designed the weighted heuristic matrix and domain mapping |
+| SEDEGAH, KIMATHI E. K. | Software Dev & Knowledge Engineer | Built the Prolog reasoning engine and the Python FFI bridge |
+| ABDUL SALAM, RABIATU | Systems Analyst | Verified logic integrity through iterative test cases |
+| AWAITEY, CHRIS LARBI | Technical Architect | Defined the system architecture and decoupled SoC pattern |
+| BOYE, EDMUND NII LARYEA | Logic Designer | Implemented the `why` and `interest_match` predicates |
+| MENDS-BREW, JASON N. S. | Research Lead | Acquired domestic and global track requirements |
+| OWUSU-ANSAH, OHENEWAA N. | Documentation Lead | Produced the Knowledge Engineering and technical reports |
+
+---
+
+
+
 > [!WARNING]
 > **Local Execution Required:** This project must be run on a local machine with a graphical display environment. Virtual codespaces (GitHub Codespaces, cloud IDEs) do not support GUI rendering and cannot run the CustomTkinter interface.
 
@@ -97,19 +113,7 @@ This model handles **uncertainty** gracefully. When a student shows moderate int
 
 ---
 
-## 5. Group Members & Contributions
 
-| Name | Role | Technical Contribution |
-|------|------|------------------------|
-| FUSEINI, IYAD-DEEN INUSAH | Group Leader & Data Modeler | Designed the weighted heuristic matrix and domain mapping |
-| SEDEGAH, KIMATHI E. K. | Software Dev & Knowledge Engineer | Built the Prolog reasoning engine and the Python FFI bridge |
-| ABDUL SALAM, RABIATU | Systems Analyst | Verified logic integrity through iterative test cases |
-| AWAITEY, CHRIS LARBI | Technical Architect | Defined the system architecture and decoupled SoC pattern |
-| BOYE, EDMUND NII LARYEA | Logic Designer | Implemented the `why` and `interest_match` predicates |
-| MENDS-BREW, JASON N. S. | Research Lead | Acquired domestic and global track requirements |
-| OWUSU-ANSAH, OHENEWAA N. | Documentation Lead | Produced the Knowledge Engineering and technical reports |
-
----
 
 ## 6. Installation & Deployment
 
