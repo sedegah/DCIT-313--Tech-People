@@ -12,12 +12,12 @@
 
 | Name | ID | Technical Contribution |
 |------|------|------------------------|
-| FUSEINI, IYAD-DEEN INUSAH | 22069364 | Designed the weighted heuristic matrix and domain mapping |
-| SEDEGAH, KIMATHI E. K. | 22237205 | Built the Prolog reasoning engine and the Python FFI bridge |
-| ABDUL SALAM, RABIATU | Systems Analyst | Verified logic integrity through iterative test cases |
+| FUSEINI, IYAD-DEEN INUSAH [iyad07] | 22069364 | Designed the weighted heuristic matrix and domain mapping |
+| SEDEGAH, KIMATHI E. K. [sedegah]| 22237205 | Built the Prolog reasoning engine and the Python FFI bridge |
+| ABDUL SALAM, RABIATU [RabiSalam] | 22176448 | Verified logic integrity through iterative test cases |
 | AWAITEY, CHRIS LARBI | Technical Architect | Defined the system architecture and decoupled SoC pattern |
 | BOYE, EDMUND NII LARYEA | Logic Designer | Implemented the `why` and `interest_match` predicates |
-| MENDS-BREW, JASON N. S. |22044742 | Acquired domestic and global track requirements |
+| MENDS-BREW, JASON N. S. [ajmends05] |22044742 | Acquired domestic and global track requirements |
 | OWUSU-ANSAH, OHENEWAA N. | Documentation Lead | Produced the Knowledge Engineering and technical reports |
 
 ---
