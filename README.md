@@ -16,7 +16,7 @@
 | SEDEGAH, KIMATHI E. K. [sedegah]| 22237205 | Built the Prolog reasoning engine and the Python FFI bridge |
 | ABDUL SALAM, RABIATU [RabiSalam] | 22176448 | Verified logic integrity through iterative test cases |
 | AWAITEY, CHRIS LARBI | 22033787 | Defined the system architecture and decoupled SoC pattern |
-| BOYE, EDMUND NII LARYEA | 22121983 | Implemented the `why` and `interest_match` predicates |
+| BOYE, EDMUND NII LARYEA [edmundboye] | 22121983 | Implemented the `why` and `interest_match` predicates |
 | MENDS-BREW, JASON N. S. [ajmends05] |22044742 | Acquired domestic and global track requirements |
 | OWUSU-ANSAH, OHENEWAA N. [ohenewaa220] | 22074304 | Produced the Knowledge Engineering and technical reports |
 
