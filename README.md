@@ -18,7 +18,7 @@
 | AWAITEY, CHRIS LARBI | Technical Architect | Defined the system architecture and decoupled SoC pattern |
 | BOYE, EDMUND NII LARYEA | Logic Designer | Implemented the `why` and `interest_match` predicates |
 | MENDS-BREW, JASON N. S. [ajmends05] |22044742 | Acquired domestic and global track requirements |
-| OWUSU-ANSAH, OHENEWAA N. | Documentation Lead | Produced the Knowledge Engineering and technical reports |
+| OWUSU-ANSAH, OHENEWAA N. [ohenewaa220] | 22074304 | Produced the Knowledge Engineering and technical reports |
 
 ---
 
