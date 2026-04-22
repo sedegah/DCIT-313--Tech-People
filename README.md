@@ -10,14 +10,14 @@
 
 ## Group Members & Contributions
 
-| Name | Role | Technical Contribution |
+| Name | ID | Technical Contribution |
 |------|------|------------------------|
-| FUSEINI, IYAD-DEEN INUSAH | Group Leader & Data Modeler | Designed the weighted heuristic matrix and domain mapping |
-| SEDEGAH, KIMATHI E. K. | Software Dev & Knowledge Engineer | Built the Prolog reasoning engine and the Python FFI bridge |
+| FUSEINI, IYAD-DEEN INUSAH | 22069364 | Designed the weighted heuristic matrix and domain mapping |
+| SEDEGAH, KIMATHI E. K. | 22237205 | Built the Prolog reasoning engine and the Python FFI bridge |
 | ABDUL SALAM, RABIATU | Systems Analyst | Verified logic integrity through iterative test cases |
 | AWAITEY, CHRIS LARBI | Technical Architect | Defined the system architecture and decoupled SoC pattern |
 | BOYE, EDMUND NII LARYEA | Logic Designer | Implemented the `why` and `interest_match` predicates |
-| MENDS-BREW, JASON N. S. | Research Lead | Acquired domestic and global track requirements |
+| MENDS-BREW, JASON N. S. |22044742 | Acquired domestic and global track requirements |
 | OWUSU-ANSAH, OHENEWAA N. | Documentation Lead | Produced the Knowledge Engineering and technical reports |
 
 ---
