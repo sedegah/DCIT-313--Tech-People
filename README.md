@@ -8,7 +8,7 @@
 
 ---
 
-## Group Members & Contributions
+## Group Members 
 FUSEINI, IYAD-DEEN INUSAH [iyad07] - 22069364
 
 SEDEGAH, KIMATHI E. K. [sedegah] - 22237205
@@ -23,15 +23,6 @@ MENDS-BREW, JASON N. S. [ajmends05] - 22044742
 
 OWUSU-ANSAH, OHENEWAA N. [ohenewaa220] - 22074304
 
-| Name [username] | ID | Technical Contribution |
-|------|------|------------------------|
-| FUSEINI, IYAD-DEEN INUSAH [iyad07] | 22069364 | Designed the weighted heuristic matrix and domain mapping |
-| SEDEGAH, KIMATHI E. K. [sedegah]| 22237205 | Built the Prolog reasoning engine and the Python FFI bridge |
-| ABDUL SALAM, RABIATU [rabisalam] | 22176448 | Verified logic integrity through iterative test cases |
-| AWAITEY, CHRIS LARBI [chrislarbi] | 22033787 | Defined the system architecture and decoupled SoC pattern |
-| BOYE, EDMUND NII LARYEA [edmundboye] | 22121983 | Implemented the `why` and `interest_match` predicates |
-| MENDS-BREW, JASON N. S. [ajmends05] |22044742 | Acquired domestic and global track requirements |
-| OWUSU-ANSAH, OHENEWAA N. [ohenewaa220] | 22074304 | Produced the Knowledge Engineering and technical reports |
 
 ---
 
@@ -175,6 +166,15 @@ Validated against **30+ synthetic profiles**, the system correctly handles:
 | **Zero Interest** | All scores ≤ 1.0 triggers "No CS Interest" with alternative path guidance |
 | **Max Intensity** | Excellence across 5+ domains identifies a "Chief Technical Product Architect" |
 
-### Ethical AI
+### Conributions
+| Name [username] | ID | Technical Contribution |
+|------|------|------------------------|
+| FUSEINI, IYAD-DEEN INUSAH [iyad07] | 22069364 | Designed the weighted heuristic matrix and domain mapping |
+| SEDEGAH, KIMATHI E. K. [sedegah]| 22237205 | Built the Prolog reasoning engine and the Python FFI bridge |
+| ABDUL SALAM, RABIATU [rabisalam] | 22176448 | Verified logic integrity through iterative test cases |
+| AWAITEY, CHRIS LARBI [chrislarbi] | 22033787 | Defined the system architecture and decoupled SoC pattern |
+| BOYE, EDMUND NII LARYEA [edmundboye] | 22121983 | Implemented the `why` and `interest_match` predicates |
+| MENDS-BREW, JASON N. S. [ajmends05] |22044742 | Acquired domestic and global track requirements |
+| OWUSU-ANSAH, OHENEWAA N. [ohenewaa220] | 22074304 | Produced the Knowledge Engineering and technical reports |
 
 When a student demonstrates no genuine interest in Computer Science (average score ≤ 1.0), the system provides honest guidance toward alternative academic paths such as Business, Arts, or Social Sciences — preventing misguided career decisions.
