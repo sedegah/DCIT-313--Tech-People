@@ -9,6 +9,13 @@
 ---
 
 ## Group Members & Contributions
+FUSEINI, IYAD-DEEN INUSAH [iyad07] - 22069364
+SEDEGAH, KIMATHI E. K. [sedegah] - 22237205
+ABDUL SALAM, RABIATU [rabisalam] - 22176448
+AWAITEY, CHRIS LARBI [chrislarbi] - 22033787
+BOYE, EDMUND NII LARYEA [edmundboye] - 22121983
+MENDS-BREW, JASON N. S. [ajmends05] - 22044742
+OWUSU-ANSAH, OHENEWAA N. [ohenewaa220] - 22074304
 
 | Name [username] | ID | Technical Contribution |
 |------|------|------------------------|
